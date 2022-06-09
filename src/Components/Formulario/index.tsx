@@ -1,11 +1,11 @@
 import React from 'react';
 import Botao from '../Botao';
-
+import style from './Formulario.module.scss';
 class Formulario extends React.Component {
     render() {
         return (
-            <form>
-                <div>
+            <form className={style.novaTarefa}>
+                <div className={style.inputContainer}>
                     <label htmlFor='tarefa'>
                         Adicione um novo estudo
                     </label>
@@ -15,7 +15,7 @@ class Formulario extends React.Component {
                         id="tarefa"
                         placeholder="O que você quer estudar" />
                 </div>
-                <div>
+                <div className={style.inputContainer}>
                     <label>Tempo</label>
                     <input 
                         type="time"
